@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #000000, #311051, #00AEEF);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #311051;
+    margin-top: -20px;
+    position: relative;
+    
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #00AEEF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 10px;
+}
+
+.h1Principal {
+    color: #00AEEF;
+}
+
+/* Back Button */
+.back-button {
+    background-color: #00AEEF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #007B9E;
+    transform: scale(1.05);
+}
+
+/* Proyectos Section */
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.proyecto {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 450px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+
+}
+
+.proyecto:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.5);
+}
+
+.proyecto img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-bottom: 2px solid #00AEEF;
+    
+}
+
+.proyecto h3 {
+    margin: 15px 0 10px;
+    font-size: 1.8rem;
+    color: #00AEEF;
+    text-transform: uppercase;
+}
+
+.proyecto p {
+    margin: 10px 15px 20px;
+    font-size: 1rem;
+    color: #b5b5b5;
+    text-align: justify;
+    
+}
+
+.proyecto a {
+    color: #00AEEF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.proyecto a:hover {
+    color: #007B9E;
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+footer a {
+    color: #00AEEF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #007B9E;
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .proyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proyecto {
+        width: 90%;
+    }
+
+    .back-button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+/* Highlighted Span */
+.span1 {
+    color: #00AEEF;
+}
+.footer{
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 2px solid #311051;
+    margin-top: 106px;
+    
+}
+
+.footer p {
+    color: #00AEEF;
+    font-size: 0.9em;
+    margin: 0;
+}

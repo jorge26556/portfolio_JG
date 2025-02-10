@@ -1,0 +1,348 @@
+/* Acá tengo estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #311051, #00AEEF);
+    color: #ffffff;
+}
+.image-container{
+    display: flex;
+}
+.image-container img{
+    width: 100%;
+    
+}
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #311051;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+    color: #00AEEF !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00AEEF !important;
+}
+
+/*Estilos del header*/
+header{
+    background: #000000;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header p{
+    color: #ffffff;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    
+}
+
+/*Estilos dek hero*/
+
+#hero{
+    position: relative;
+}
+#hero #computadora{
+    
+    width: 100%;
+    
+    
+}
+#hero #computadora img{
+    
+    height: 1200px;
+    
+    
+}
+
+#hero .informacion-contenedor{
+    /*position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 10%;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;*/
+
+    box-sizing: border-box;
+    width: calc(100% - 100px);
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+    
+}
+
+#hero .informacion-contenedor #foto{
+    width: 200px;
+    
+
+}
+#hero .informacion-contenedor #foto img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #00AEEF;
+    
+}
+#hero .informacion-contenedor .informacion{
+    padding: 20px;
+    margin-left: 200px;
+    background-color: #ffffff;
+    font-weight: bolder;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    color: #000000;
+    text-align: justify;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+    margin-top: 80px;
+    
+    
+
+}
+
+#hero .informacion span {
+    color: #00AEEF;
+    display: block;
+    margin-bottom: 10px;
+}
+main{
+    
+    background: linear-gradient(135deg, #000000, #311051, #00AEEF);
+    height: 100%;
+    
+    
+}
+main p{
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: justify;
+    padding: 350px;
+    color: #ffffff;
+    
+    
+}
+
+/*Acá va las tarjetas de Perfil Profesional*/
+
+
+
+
+
+/* Contenedor principal */
+#perfilProfesional {
+    margin-top: 20px;
+    background: linear-gradient(135deg, rgb(255, 255, 255), rgb(51, 21, 69), rgb(255, 255, 255));
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    height: 700px;
+    
+}
+
+/* Tarjetas */
+.tarjeta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px) scale(1.05);
+    
+}
+
+.subtarjeta {
+    width: 300px; /* Ajustar el tamaño */
+    height: 600px; /* Ajustar el tamaño */
+    background-color: #2a0156;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+}
+
+.subtarjeta:hover {
+    background-color: #311051;
+}
+
+/* Título de las tarjetas */
+h4 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease; /* Animación para el color */
+}
+
+.subtarjeta:hover h4 {
+    color: #ffffff; /* Cambia a blanco puro al pasar el cursor */
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #00AEEF, #ffffff, #311051);
+}
+
+/* Cuerpo de las tarjetas */
+.cuerpo-tarjeta {
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.cuerpo-tarjeta img {
+    width: 100%;
+    max-width: 200px; /* Tamaño de la imagen */
+    margin: 5px auto 10px; /* Reducir el margen superior */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+    top: -20px; /* Ajusta este valor para moverla más arriba */
+}
+
+.cuerpo-tarjeta img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Botones */
+button {
+    background-color: #00AEEF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #007B9E;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+footer {
+    background: linear-gradient(135deg, #000000, #311051, #00AEEF);
+    color: #ffffff;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+footer .parte1-footer {
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+footer .correo {
+    font-weight: bold;
+    color: #00AEEF;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer .correo:hover {
+    color: #007B9E;
+}
+
+/* Redes sociales */
+footer .social_media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+
+footer .social_media-icons li {
+    list-style: none;
+}
+
+footer .social_media-icons .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+footer .social_media-icons .social-icon:hover {
+    transform: scale(1.1);
+    background-color: #00AEEF;
+}
+
+footer .social_media-icons .social-icon img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+
