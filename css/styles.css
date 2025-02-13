@@ -1,10 +1,9 @@
-/* Acá tengo estilos generales*/
-*{
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -13,18 +12,21 @@ body {
     background: linear-gradient(135deg, #000000, #311051, #00AEEF);
     color: #ffffff;
 }
-.image-container{
+
+.image-container {
     display: flex;
 }
-.image-container img{
+
+.image-container img {
     width: 100%;
-    
 }
+
 /* Navbar */
 .navbar {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8) !important;
     border-bottom: 2px solid #311051;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
 }
 
 .navbar-brand {
@@ -44,52 +46,69 @@ body {
     color: #00AEEF !important;
 }
 
-/*Estilos del header*/
-header{
+/* Estilos del botón hamburguesa */
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    border: 2px solid #00AEEF !important;
+    position: relative;
+    background-color: transparent;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2300AEEF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Estilos para el botón hamburguesa */
+.navbar-toggler {
+    border: 2px solid #00AEEF;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 174, 239, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Estilos para el menú colapsado */
+.navbar-collapse {
+    transition: all 0.3s ease;
+}
+
+/* Estilos del header */
+header {
     background: #000000;
     padding: 10px 50px;
     display: flex;
     flex-direction: column;
-    
 }
 
-header p{
+header p {
     color: #ffffff;
     text-align: center;
     font-weight: bolder;
     font-size: 40px;
-    
 }
 
-/*Estilos dek hero*/
-
-#hero{
+/* Estilos del hero */
+#hero {
     position: relative;
 }
-#hero #computadora{
-    
+
+#hero #computadora {
     width: 100%;
-    
-    
 }
-#hero #computadora img{
-    
+
+#hero #computadora img {
+    width: 100%;
     height: 1200px;
-    
-    
+    object-fit: cover;
 }
 
-#hero .informacion-contenedor{
-    /*position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    left: 10%;
-    width: 100%;
-    padding: 0 50px;
-    display: flex;*/
-
-    box-sizing: border-box;
-    width: calc(100% - 100px);
+#hero .informacion-contenedor {
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
@@ -98,26 +117,20 @@ header p{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-    
-    
-    
 }
 
-#hero .informacion-contenedor #foto{
+#hero .informacion-contenedor #foto {
     width: 200px;
-    
-
 }
-#hero .informacion-contenedor #foto img{
+
+#hero .informacion-contenedor #foto img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     border: 5px solid #00AEEF;
-    
 }
-#hero .informacion-contenedor .informacion{
+
+#hero .informacion-contenedor .informacion {
     padding: 20px;
     margin-left: 200px;
     background-color: #ffffff;
@@ -131,9 +144,6 @@ header p{
     overflow: auto;
     padding: 20px;
     margin-top: 80px;
-    
-    
-
 }
 
 #hero .informacion span {
@@ -141,30 +151,21 @@ header p{
     display: block;
     margin-bottom: 10px;
 }
-main{
-    
+
+main {
     background: linear-gradient(135deg, #000000, #311051, #00AEEF);
     height: 100%;
-    
-    
 }
-main p{
+
+main p {
     margin-top: -20px;
     font-size: 20px;
     text-align: justify;
     padding: 350px;
     color: #ffffff;
-    
-    
 }
 
-/*Acá va las tarjetas de Perfil Profesional*/
-
-
-
-
-
-/* Contenedor principal */
+/* Perfil Profesional */
 #perfilProfesional {
     margin-top: 20px;
     background: linear-gradient(135deg, rgb(255, 255, 255), rgb(51, 21, 69), rgb(255, 255, 255));
@@ -176,48 +177,42 @@ main p{
     gap: 40px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
     height: 700px;
-    
 }
 
-/* Tarjetas */
 .tarjeta {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
 }
 
 .tarjeta:hover {
     transform: translateY(-10px) scale(1.05);
-    
 }
 
 .subtarjeta {
-    width: 300px; /* Ajustar el tamaño */
-    height: 600px; /* Ajustar el tamaño */
+    width: 300px;
+    height: 600px;
     background-color: #2a0156;
     border-radius: 15px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    
 }
 
 .subtarjeta:hover {
     background-color: #311051;
 }
 
-/* Título de las tarjetas */
 h4 {
     color: #ffffff;
     font-size: 1.5rem;
     text-transform: uppercase;
-    transition: color 0.3s ease; /* Animación para el color */
+    transition: color 0.3s ease;
 }
 
 .subtarjeta:hover h4 {
-    color: #ffffff; /* Cambia a blanco puro al pasar el cursor */
+    color: #ffffff;
 }
 
 hr {
@@ -226,7 +221,6 @@ hr {
     background: linear-gradient(to right, #00AEEF, #ffffff, #311051);
 }
 
-/* Cuerpo de las tarjetas */
 .cuerpo-tarjeta {
     text-align: center;
     padding: 10px;
@@ -236,19 +230,18 @@ hr {
 
 .cuerpo-tarjeta img {
     width: 100%;
-    max-width: 200px; /* Tamaño de la imagen */
-    margin: 5px auto 10px; /* Reducir el margen superior */
+    max-width: 200px;
+    margin: 5px auto 10px;
     border-radius: 10px;
     transition: transform 0.3s ease;
     position: relative;
-    top: -20px; /* Ajusta este valor para moverla más arriba */
+    top: -20px;
 }
 
 .cuerpo-tarjeta img:hover {
     transform: scale(1.1) rotate(5deg);
 }
 
-/* Botones */
 button {
     background-color: #00AEEF;
     border: none;
@@ -269,7 +262,7 @@ button:active {
     transform: scale(0.95);
 }
 
-
+/* Footer */
 footer {
     background: linear-gradient(135deg, #000000, #311051, #00AEEF);
     color: #ffffff;
@@ -309,7 +302,6 @@ footer .correo:hover {
     color: #007B9E;
 }
 
-/* Redes sociales */
 footer .social_media-icons {
     display: flex;
     justify-content: center;
@@ -345,4 +337,213 @@ footer .social_media-icons .social-icon img {
     object-fit: contain;
 }
 
+/* Media Queries */
+@media screen and (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+    }
 
+    .navbar-nav {
+        padding: 0.5rem 0;
+    }
+
+    .nav-item {
+        padding: 0.25rem 0;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        text-align: center;
+        border-radius: 0.25rem;
+        margin: 0.25rem 0;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(0, 174, 239, 0.1);
+    }
+
+    /* Animaciones del menú */
+    .navbar-collapse {
+        transition: height 0.3s ease;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .navbar-collapse.show {
+        height: auto;
+        overflow: visible;
+    }
+
+    .navbar-collapse.collapsing {
+        transition: height 0.3s ease;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header p {
+        font-size: 32px;
+    }
+
+    #hero #computadora img {
+        height: 800px;
+    }
+
+    #hero .informacion-contenedor {
+        padding: 0 30px;
+    }
+
+    #hero .informacion-contenedor .informacion {
+        margin-left: 100px;
+        width: 60%;
+    }
+
+    main p {
+        padding: 50px;
+    }
+
+    #perfilProfesional {
+        height: auto;
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header p {
+        font-size: 24px;
+        padding: 5px 20px;
+    }
+
+    #hero {
+        height: 100vh;
+    }
+
+    #hero #computadora img {
+        height: 100vh;
+    }
+
+    #hero .informacion-contenedor {
+        flex-direction: column;
+        top: 50%;
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    #hero .informacion-contenedor #foto {
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    #hero .informacion-contenedor #foto img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #hero .informacion-contenedor .informacion {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    main p {
+        padding: 30px;
+        font-size: 16px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .subtarjeta {
+        width: 90%;
+        height: auto;
+        min-height: 500px;
+    }
+
+    footer .social_media-icons {
+        gap: 10px;
+    }
+
+    footer .social_media-icons .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    footer .social_media-icons .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-collapse {
+        margin-top: 0.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 5px 20px;
+    }
+
+    #hero #computadora img {
+        height: 100vh;
+    }
+
+    #hero .informacion-contenedor {
+        top: 50%;
+        padding: 0 15px;
+    }
+
+    #hero .informacion-contenedor #foto img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #hero .informacion-contenedor .informacion {
+        width: 95%;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    #hero .informacion-contenedor .informacion h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero .informacion-contenedor .informacion p {
+        font-size: 0.9rem;
+    }
+
+    main p {
+        padding: 20px;
+    }
+
+    .subtarjeta {
+        width: 95%;
+    }
+
+    footer h3 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
