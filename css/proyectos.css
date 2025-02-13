@@ -10,13 +10,12 @@ body {
 
 /* Header Styles */
 header {
+    position: relative; /* Para posicionar el botón */
     text-align: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
     border-bottom: 2px solid #311051;
-    margin-top: -20px;
-    position: relative;
-    
+    margin-top: 20px;
 }
 
 header h1 {
@@ -58,7 +57,7 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     margin: 40px 0;
 }
 
@@ -71,7 +70,6 @@ header h1 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 20px;
-
 }
 
 .proyecto:hover {
@@ -84,7 +82,6 @@ header h1 {
     height: 250px;
     object-fit: contain;
     border-bottom: 2px solid #00AEEF;
-    
 }
 
 .proyecto h3 {
@@ -99,7 +96,6 @@ header h1 {
     font-size: 1rem;
     color: #b5b5b5;
     text-align: justify;
-    
 }
 
 .proyecto a {
@@ -139,38 +135,61 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-    .proyectos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .proyecto {
-        width: 90%;
-    }
-
-    .back-button {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
-}
-
 /* Highlighted Span */
 .span1 {
     color: #00AEEF;
 }
-.footer{
+
+/* Footer Alternate */
+.footer {
     text-align: center;
     padding: 10px;
     background: rgba(0, 0, 0, 0.9);
     border-top: 2px solid #311051;
     margin-top: 106px;
-    
 }
 
 .footer p {
     color: #00AEEF;
     font-size: 0.9em;
     margin: 0;
+}
+
+/* Responsive Styles */
+
+/* Para dispositivos con ancho máximo de 768px */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .back-button {
+        font-size: 16px;
+        padding: 8px 15px;
+        top: 30px;
+        left: 20px;
+    }
+    .proyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .proyecto {
+        width: 80%;
+    }
+}
+
+/* Para dispositivos muy pequeños (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 10px 10px 70px; /* Se aumenta el padding-left para que el título no se solape con el botón */
+    }
+    header h1 {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    .back-button {
+        font-size: 14px;
+        padding: 6px 12px;
+        top: 15px;
+        left: 10px;
+    }
 }
